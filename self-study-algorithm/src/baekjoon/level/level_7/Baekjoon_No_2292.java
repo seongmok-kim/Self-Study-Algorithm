@@ -30,7 +30,7 @@ public class Baekjoon_No_2292 {
 					result += i;
 					
 					break;
-				} 
+				}
 				startNum = endNum + 1; 
 			}
 		}
