@@ -6,7 +6,8 @@ public class Baekjoon_No_2292 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 1~6은 5, 6~17은 11, 17~34는 17처럼 기존 차이나는 숫자의 +6임. 
+		// 2~7은 6, 8~19는 12, 20~37는 18, 38~61은 24.
+		// 즉, 6n만큼 증가되는 규칙을 가지고 있다. 
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -21,13 +22,16 @@ public class Baekjoon_No_2292 {
 			int endNum;
 			
 			for(int i = 1;true;i++) {
+				// 시작점도 포함이므로 1을 빼준다.
 				endNum = startNum + (6*i) -1;
+				
+				// 입력받은 수가 startNum, endNum 사이에 있을 
 				if(startNum <= num && num <= endNum ) {
 					result += i;
 					
 					break;
-				}
-				startNum = endNum + 1;
+				} 
+				startNum = endNum + 1; 
 			}
 		}
 		System.out.println(result);
