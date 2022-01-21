@@ -1,4 +1,4 @@
-package baekjoon.level.level_7;
+package baekjoon.level.level_8;
 
 import java.util.*;
 
