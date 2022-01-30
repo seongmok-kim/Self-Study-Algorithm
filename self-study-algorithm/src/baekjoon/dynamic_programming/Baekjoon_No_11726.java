@@ -29,7 +29,7 @@ public class Baekjoon_No_11726 {
 		}
 		
 		// 출력
-		System.out.println(d[N]);
+		System.out.println(d[N]%10007);
 		
 	}
 
