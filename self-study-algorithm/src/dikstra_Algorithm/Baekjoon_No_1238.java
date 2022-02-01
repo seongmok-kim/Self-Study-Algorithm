@@ -88,7 +88,7 @@ public class Baekjoon_No_1238 {
 					pq1.offer(new Node(graph1.get(index).get(i).getIndex(), temp));
 				}
 			}
-		}
+		} 
 
 		/**** 각자 마을에서 X마을로 가는 최단 경로 구하기 ****/
 		// 우선순위 큐2
