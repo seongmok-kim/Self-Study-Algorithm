@@ -1,4 +1,4 @@
-package floyd_warshall_Algorithm;
+package baekjoon.floyd_warshall_Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;

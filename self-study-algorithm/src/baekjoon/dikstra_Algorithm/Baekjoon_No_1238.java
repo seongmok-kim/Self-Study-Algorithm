@@ -1,4 +1,4 @@
-package dikstra_Algorithm;
+package baekjoon.dikstra_Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
