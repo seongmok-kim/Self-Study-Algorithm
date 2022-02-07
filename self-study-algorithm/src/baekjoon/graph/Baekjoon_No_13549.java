@@ -51,7 +51,7 @@ public class Baekjoon_No_13549 {
 		q.offer(new Node(START, 0));
 		
 		// 큐가 빌 때 까지 반복
-		while(!q.isEmpty()) {
+		while(!q.isEmpty()) { 
 			Node node = q.poll();
 			
 			// 방문 했는 지 여부를 큐에 넣기 전에 하기(우선순위 큐를 이용한 경우에는 큐에서 꺼낸 후에 해도 괜찮음)
