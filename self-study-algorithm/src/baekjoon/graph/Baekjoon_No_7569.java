@@ -32,7 +32,7 @@ public class Baekjoon_No_7569 {
 	public static int after = 0;
 	
 	public static void BFS() {
-		Queue<Node> q = new LinkedList<Node>();
+		Queue<Node> q = new LinkedList<Node>(); 
 		
 		// 익은 토마토를 큐에 넣기
 		for(int i=0;i<doneTomato.size(); i++) {
