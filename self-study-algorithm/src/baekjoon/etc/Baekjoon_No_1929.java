@@ -35,7 +35,7 @@ public class Baekjoon_No_1929 {
 		int start = Integer.parseInt(st.nextToken());
 		int end = Integer.parseInt(st.nextToken());
 		
-		arr = new boolean[end+1];
+		arr = new boolean[end+1]; 
 		
 		// 모두가 소수라고 초기화 
 		Arrays.fill(arr, true);
