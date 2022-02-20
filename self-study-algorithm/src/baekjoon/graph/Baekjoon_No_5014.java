@@ -97,7 +97,7 @@ public class Baekjoon_No_5014 {
 		BFS();
 		
 		if(result == (int)1e9) {
-			System.out.println("use the stairs");
+			System.out.println("use the stairs"); 
 		}
 		else {
 			System.out.println(result);
