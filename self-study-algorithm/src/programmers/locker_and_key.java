@@ -2,6 +2,7 @@ package programmers;
 
 public class locker_and_key {
 
+	// 2차원 배열 90도 회전
 	public static int[][] rotate(int[][] arr) {
 	    int n = arr.length;
 	    int m = arr[0].length;
@@ -29,22 +30,23 @@ public class locker_and_key {
         	}
         }
         
+        // 회전한 열쇠
         int[][] rotatedKey = key;
         
         // 임시 맵(실제로 데이터를 넣다뺴는 작업을 진행할 변수)
         int[][] tempMap = new int[mapSize][mapSize];
         
-        // 열쇠를 4번 회전
+        // 열쇠를 총 4번 회전
         for(int cnt=0; cnt<4; cnt++) {
         	
-        	// 회전
+        	// 열쇠 90도 회전
         	rotatedKey = rotate(rotatedKey);
         	
-            // 자물쇠에 열쇠 꽂기
+            // tempMap의 0,0부터 key의 0,0 맞춰보기
             for(int i=0; i<tempMap.length-key.length+1; i++) {
             	for(int j=0; j<tempMap.length-key.length+1; j++) {
             		
-            		// tempMap초기화
+            		// tempMap 초기화
                     for(int a=0; a<tempMap.length; a++) {
                     	for(int b=0; b<tempMap.length; b++) {
                     		tempMap[a][b] = map[a][b];
@@ -52,23 +54,15 @@ public class locker_and_key {
                     }
                     
             		boolean check = true;
-            		for(int k=0; k<key.length; k++) {
-            			for(int m=0; m<key.length; m++) {
+            		// key를 tempMap에 합치기
+            		for(int k=0; k<rotatedKey.length; k++) {
+            			for(int m=0; m<rotatedKey.length; m++) {
             				int sum = tempMap[i+k][j+m] + rotatedKey[k][m];
             				tempMap[i+k][j+m] = sum;
             			}
             		} 
             		
-            		/*
-                    for(int a=0; a<tempMap.length; a++) {
-                    	System.out.println();
-                    	for(int b=0; b<tempMap.length; b++) {
-                    		System.out.print(tempMap[a][b] + " ");
-                    	}
-                    }
-                    System.out.println();
-                    */
-            		
+            		// tempMap 안에 있는 자물쇠영역이 모두 1이어야함.
             		for(int k=0; k<lock.length; k++) {
             			for(int m=0; m<lock.length; m++) {
             				
@@ -83,7 +77,7 @@ public class locker_and_key {
             			}
             		}
             		
-            		// 자물쇠부분이 모두 1
+            		// 자물쇠부분이 모두 1이면 열쇠가 작동하는 것이므로 true 리턴
             		if(check) {
             			return true;
             		}
@@ -91,6 +85,7 @@ public class locker_and_key {
             }
         }
         
+        // 위의 모든 경우의 수를 해봤는데 안되면 false반환
         return false;
     }
     
@@ -102,7 +97,6 @@ public class locker_and_key {
 		
 		boolean result = solution(KEY, LOCK);
 		
-		System.out.println();
 		System.out.println(result);
 	}
 
