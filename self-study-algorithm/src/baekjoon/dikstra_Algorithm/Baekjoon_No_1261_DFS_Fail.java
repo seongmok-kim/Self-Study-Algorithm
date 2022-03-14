@@ -67,7 +67,7 @@ public class Baekjoon_No_1261_DFS_Fail {
 				visited[tempa][tempb] = false;
 			}
 		}
-	}
+	}  
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
