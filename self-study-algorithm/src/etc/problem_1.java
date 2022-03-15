@@ -126,6 +126,6 @@ public class problem_1 {
 		DFS(height, 0, 0, 0);
 		
 		System.out.println(result % 10000019);
-	}
+	} 
 
 }
