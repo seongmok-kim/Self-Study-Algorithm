@@ -10,7 +10,7 @@ public class insertionSort {
 	 - 최악의 경우에는 시간복잡도가 O(N^2)
 	 - 공간 복잡도 : O(N), 시간 복잡도 : O(N) ~ O(N^2)
 	******/ 
-	public static int[] SelectionSort(int[] arr) {
+	public static int[] InsertionSort(int[] arr) {
 		
 		for(int i=1; i<arr.length; i++) {
 			
@@ -39,7 +39,7 @@ public class insertionSort {
 		}
 		System.out.println();
 		
-		int[] changed = SelectionSort(arr);
+		int[] changed = InsertionSort(arr);
 		
 		System.out.print("변경 후 : ");
 		for(int i=0; i<changed.length; i++) {
