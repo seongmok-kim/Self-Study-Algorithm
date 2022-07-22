@@ -25,7 +25,7 @@ public class Baekjoon_No_2470 {
 		
 		N = Integer.parseInt(br.readLine());
 		StringTokenizer st = new StringTokenizer(br.readLine());
-
+ 
 		arr = new long[N];
 		for(int i=0; i<N; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
