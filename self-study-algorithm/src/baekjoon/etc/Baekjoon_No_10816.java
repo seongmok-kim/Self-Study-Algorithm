@@ -49,7 +49,7 @@ public class Baekjoon_No_10816{
 				cnt = 0;
 			// 있으면 그대로 출력
 			}else {
-				cnt = resultMap.get(num);
+				cnt = resultMap.get(num);  
 			}
 			sb.append(cnt + " ");
 		}
