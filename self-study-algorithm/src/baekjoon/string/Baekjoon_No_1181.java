@@ -79,7 +79,7 @@ public class Baekjoon_No_1181 {
 			}
 		}
 		
-		
+		 
 	}
 
 }
