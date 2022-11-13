@@ -9,7 +9,7 @@ public class Baekjoon_No_12865 {
 	
 	// N : 물건의 갯수, K : 버틸 수 있는 무게
 	public static int N, K;
-	
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
