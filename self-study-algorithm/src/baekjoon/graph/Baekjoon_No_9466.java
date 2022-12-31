@@ -43,18 +43,19 @@ public class Baekjoon_No_9466 {
     }
 
     public static void dfs(int idx) {
-        if(visited[idx]){
+        if(visited[idx]){           // 방문한 적이 있다면 사이클이 생긴 것이므로 탐색 및 카운트 증가
             done[idx] = true;
             cnt++;
         }
-        else{
+        else{                       // 방문한 적이 없으면 방문 체크
             visited[idx] = true;
         }
 
-        if(!done[arr[idx]]){
+        if(!done[arr[idx]]){        // 내가 바라보는 사람이 탐색된 적이 없다면 탐색 진행
             dfs(arr[idx]);
         }
 
+        // 방문 체크 해제하고, 탐색 여부 true로 변경
         visited[idx] = false;
         done[idx] = true;
     }
