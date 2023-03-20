@@ -56,19 +56,19 @@ public class Baekjoon_No_1162 {
         d[1][0] = 0;
 
         while (!pq.isEmpty()){
-            Path road = pq.poll();
+            Path now = pq.poll();
 
-            if(d[road.idx][K - road.canCoverCount] < road.cost) continue;
+            if(d[now.idx][K - now.canCoverCount] < now.cost) continue;
 
-            for(Path cur : map.get(road.idx)){
+            for(Path next : map.get(now.idx)){
 
-                if(d[cur.idx][K - road.canCoverCount] > road.cost + cur.cost){
-                    d[cur.idx][K - road.canCoverCount] = road.cost + cur.cost;
-                    pq.offer(new Path(cur.idx, d[cur.idx][K - road.canCoverCount], road.canCoverCount));
+                if(d[next.idx][K - now.canCoverCount] > now.cost + next.cost){
+                    d[next.idx][K - now.canCoverCount] = now.cost + next.cost;
+                    pq.offer(new Path(next.idx, d[next.idx][K - now.canCoverCount], now.canCoverCount));
                 }
-                if(road.canCoverCount > 0 && d[cur.idx][K-road.canCoverCount+1] > road.cost) {
-                    d[cur.idx][K-road.canCoverCount+1] = road.cost;
-                    pq.offer(new Path(cur.idx, d[cur.idx][K-road.canCoverCount+1], road.canCoverCount - 1));
+                if(now.canCoverCount > 0 && d[next.idx][K-now.canCoverCount+1] > now.cost) {
+                    d[next.idx][K-now.canCoverCount+1] = now.cost;
+                    pq.offer(new Path(next.idx, d[next.idx][K-now.canCoverCount+1], now.canCoverCount - 1));
                 }
             }
         }
