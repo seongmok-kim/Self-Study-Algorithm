@@ -14,7 +14,6 @@ public class Baekjoon_No_11403 {
         int[][] map = new int[N][N];
 
         for(int i=0; i<N; i++) {
-            //Arrays.fill(map[i], INF);
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             for(int j=0; j<N; j++) {
@@ -26,7 +25,6 @@ public class Baekjoon_No_11403 {
         for(int i=0; i<N; i++){
             for(int from=0; from<N; from++){
                 for(int to=0; to<N; to++){
-                    //map[from][to] = Math.min(map[from][to], map[from][i] + map[i][to]);
                     if(map[from][i] == 1 && map[i][to] == 1) map[from][to] = 1;
                 }
             }
