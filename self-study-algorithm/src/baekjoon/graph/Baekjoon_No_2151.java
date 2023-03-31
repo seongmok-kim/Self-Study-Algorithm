@@ -9,24 +9,14 @@ public class Baekjoon_No_2151 {
     static class Node implements Comparable<Node>{
         int y;
         int x;
-        int cnt;
-        int direction;
+        int cnt;        // 거울 설치 횟수
+        int direction;  // 방향
 
         public Node(int y, int x, int cnt, int direction) {
             this.y = y;
             this.x = x;
             this.cnt = cnt;
             this.direction = direction;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "y=" + y +
-                    ", x=" + x +
-                    ", cnt=" + cnt +
-                    ", direction=" + direction +
-                    '}';
         }
 
         @Override
@@ -41,6 +31,8 @@ public class Baekjoon_No_2151 {
 
         // *: 벽, #: 문, .: 빈공간, !: 거울 설치 가능 위치
         char[][] map = new char[N][N];
+
+        // 4방향에서 오는 거까지 계산한 방문 체크 변수 사용
         boolean[][][] visited = new boolean[N][N][4];
 
         // 방향
@@ -96,7 +88,6 @@ public class Baekjoon_No_2151 {
                 q.offer(new Node(tempY, tempX, now.cnt, now.direction));
                 visited[tempY][tempX][now.direction] = true;
             }
-
 
             if(map[tempY][tempX] == '!'){
                 int d1 = now.direction+1;
