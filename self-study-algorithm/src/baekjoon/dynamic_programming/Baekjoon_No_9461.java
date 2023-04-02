@@ -28,7 +28,7 @@ public class Baekjoon_No_9461 {
 
         if(max > 3) {
             for(int i=3; i<max; i++) {
-                // 점화식 : dp[i] = dp[i-3] + dp[i-2];
+                // 점화식 : dp[i] = dp[i-3] + dp[i-2]
                 dp[i] = dp[i-3] + dp[i-2];
             }
         }
