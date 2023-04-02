@@ -27,8 +27,6 @@ public class Baekjoon_No_2467 {
     static void BinarySearch(int start, int end) {
         if(start >= end) return;
 
-        int mid =  (start+end) / 2;
-
         int sum = arr[start] + arr[end];
         if(Math.abs(sum) < figure) {
             num1=arr[start];
