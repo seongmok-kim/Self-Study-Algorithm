@@ -41,6 +41,7 @@ public class Baekjoon_No_14284 {
             int posB = Integer.parseInt(st.nextToken());
             int length = Integer.parseInt(st.nextToken());
 
+            // 양방향 통행 가능하도록
             graph.get(posA).add(new Pos(posB, length));
             graph.get(posB).add(new Pos(posA, length));
         }
@@ -50,11 +51,12 @@ public class Baekjoon_No_14284 {
         int end = Integer.parseInt(st.nextToken());
 
         int[] d = new int[N+1];
-        Arrays.fill(d, 99_000_000);
+        Arrays.fill(d, 99_000_000);     // 무한으로 초기화
         d[start] = 0;
         Queue<Pos> q = new LinkedList<>();
         q.offer(new Pos(start, 0));
 
+        // 이하 일반적인 다익스트라 알고리즘과 동일
         while(!q.isEmpty()) {
             Pos now = q.poll();
 
