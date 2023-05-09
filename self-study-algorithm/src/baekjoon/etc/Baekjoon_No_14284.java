@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Baekjoon_No_1446 {
+public class Baekjoon_No_14284 {
 
     static class Pos implements Comparable<Pos>{
         int idx;
